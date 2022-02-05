@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="max-w-lg">
           <h1 className="text-8xl font-bold mb-8">Oops 🙊</h1>
           <h1 className="mt-2 mb-2 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Uh oh! I think you’re lost.
+            I think you’re lost.
           </h1>
           <Link to="/" className="btn btn-primary btn-lg">
             <FaHome className="mr-2" />
