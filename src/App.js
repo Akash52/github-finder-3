@@ -5,6 +5,7 @@ import Navbar from './Components/Layout/Navbar'
 import About from './Pages/About'
 import Home from './Pages/Home'
 import NotFound from './Pages/NotFound'
+import User from './Pages/User'
 import { GithubProvider } from './context/github/GithubContext'
 import { AlertProvider } from './context/alert/AlertContext'
 import Alert from './Components/Layout/Alert'
@@ -21,6 +22,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/user/:login" element={<User />} />
                 <Route path="/notFound" element={<NotFound />} />
                 <Route path="/*" element={<NotFound />} />
               </Routes>
