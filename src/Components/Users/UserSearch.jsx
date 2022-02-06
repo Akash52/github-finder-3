@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react'
 import GithubContext from '../../context/github/GithubContext'
 
 const UserSearch = () => {
-  const { users } = useContext(GithubContext)
   const [text, setText] = useState('')
+  const { users, searchUsers } = useContext(GithubContext)
 
   const handleChange = (e) => {
     setText(e.target.vale)
@@ -12,11 +12,11 @@ const UserSearch = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (text === ' ') {
+    if (text === '') {
       alert('Please Enter Something')
     } else {
       //TODO - search Users
-
+      searchUsers(text)
       setText('')
     }
   }
@@ -45,7 +45,7 @@ const UserSearch = () => {
           </div>
         </form>
       </div>
-      {users.lenght > 0 && (
+      {users.length > 0 && (
         <div>
           <button className="btn btn-ghost btn-lg">Clear</button>
         </div>
